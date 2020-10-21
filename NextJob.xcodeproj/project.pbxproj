@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF65E874253F5718002D4D5C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65E873253F5718002D4D5C /* File.swift */; };
 		DF65E879253F5B91002D4D5C /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65E878253F5B91002D4D5C /* RegisterController.swift */; };
 		DF8B4810253F399B00276742 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4804253F395100276742 /* Nunito-SemiBold.ttf */; };
 		DF8B4818253F3BBE00276742 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4814253F3BBE00276742 /* NotoSans-BoldItalic.ttf */; };
 		DF8B4819253F3BBE00276742 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4815253F3BBE00276742 /* NotoSans-Italic.ttf */; };
 		DF8B481A253F3BBE00276742 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4816253F3BBE00276742 /* NotoSans-Bold.ttf */; };
 		DF8B481B253F3BBE00276742 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4817253F3BBE00276742 /* NotoSans-Regular.ttf */; };
+		DFA20D62254064E800033286 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA20D61254064E800033286 /* LoginManager.swift */; };
+		DFA20D7725409B0900033286 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA20D7625409B0900033286 /* LoginData.swift */; };
+		DFA20D7C2540B9C100033286 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA20D7B2540B9C000033286 /* LoginModel.swift */; };
 		DFB29FAD253DF3B7009133BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FAC253DF3B7009133BC /* AppDelegate.swift */; };
 		DFB29FAF253DF3B7009133BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FAE253DF3B7009133BC /* SceneDelegate.swift */; };
 		DFB29FB1253DF3B7009133BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FB0253DF3B7009133BC /* LoginViewController.swift */; };
@@ -42,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DF65E873253F5718002D4D5C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		DF65E878253F5B91002D4D5C /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		DF8B4802253F395100276742 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Italic.ttf"; path = "../../../../../Downloads/Nunito/Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		DF8B4803253F395100276742 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Black.ttf"; path = "../../../../../Downloads/Nunito/Nunito-Black.ttf"; sourceTree = "<group>"; };
@@ -62,6 +63,9 @@
 		DF8B4815253F3BBE00276742 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Italic.ttf"; path = "../../../../../Downloads/Noto_Sans/NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		DF8B4816253F3BBE00276742 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Bold.ttf"; path = "../../../../../Downloads/Noto_Sans/NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		DF8B4817253F3BBE00276742 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Regular.ttf"; path = "../../../../../Downloads/Noto_Sans/NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		DFA20D61254064E800033286 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		DFA20D7625409B0900033286 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		DFA20D7B2540B9C000033286 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		DFB29FA9253DF3B7009133BC /* NextJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB29FAC253DF3B7009133BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFB29FAE253DF3B7009133BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,7 +189,9 @@
 		DFB29FEB253E34C2009133BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF65E873253F5718002D4D5C /* File.swift */,
+				DFA20D61254064E800033286 /* LoginManager.swift */,
+				DFA20D7625409B0900033286 /* LoginData.swift */,
+				DFA20D7B2540B9C000033286 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,11 +348,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA20D62254064E800033286 /* LoginManager.swift in Sources */,
+				DFA20D7C2540B9C100033286 /* LoginModel.swift in Sources */,
 				DF65E879253F5B91002D4D5C /* RegisterController.swift in Sources */,
 				DFB29FB1253DF3B7009133BC /* LoginViewController.swift in Sources */,
-				DF65E874253F5718002D4D5C /* File.swift in Sources */,
 				DFB29FAD253DF3B7009133BC /* AppDelegate.swift in Sources */,
 				DFB29FAF253DF3B7009133BC /* SceneDelegate.swift in Sources */,
+				DFA20D7725409B0900033286 /* LoginData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

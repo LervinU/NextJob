@@ -191,7 +191,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OiD-sT-iIg"/>
-                                    <segue destination="xX7-8t-1bv" kind="presentation" identifier="goToMain" modalPresentationStyle="fullScreen" id="Hqr-z4-478"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-wx-NP6">
@@ -290,6 +289,9 @@
                     <connections>
                         <outlet property="RegisterButton" destination="SsY-wx-NP6" id="YLd-63-F0s"/>
                         <outlet property="loginBtn" destination="Gx9-dJ-7Se" id="1Ir-sB-ge7"/>
+                        <outlet property="passwordField" destination="qxF-bH-m7r" id="K95-BV-aHX"/>
+                        <outlet property="usernameField" destination="XSo-mj-Jp9" id="IJQ-YC-DoE"/>
+                        <segue destination="xX7-8t-1bv" kind="presentation" identifier="goToMain" modalPresentationStyle="fullScreen" id="Loj-eZ-ZFG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
