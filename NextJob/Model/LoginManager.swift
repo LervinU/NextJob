@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct LoginManager {
+class LoginManager {
     
-    var accessToken: LoginModel?
+    var accessToken: String?
     
     func login(username: String, password: String) {
         let Url = String(format: "http://newnexusvacantsapp-env.eba-ismjscyn.us-east-2.elasticbeanstalk.com/auth/signin")
@@ -35,8 +35,8 @@ struct LoginManager {
             let session = URLSession.shared
             session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
-                    parseJSON(loginData: data)
-                
+                    self.parseJSON(loginData: data)
+                    
 //                    do {
 //                        let json = try JSONSerialization.jsonObject(with: data, options: [])
 //                        parseJSON(loginData: json)
@@ -52,14 +52,18 @@ struct LoginManager {
         do {
             let decodedData = try decoder.decode(LoginData.self, from: loginData)
             if decodedData.accessToken != nil {
+                    accessToken = decodedData.accessToken
+//                print(accessToken)
                 let defaults = UserDefaults.standard
                 defaults.setValue(decodedData.accessToken, forKey: "sessionToken")
             }
         } catch {
             print(error)
         }
-        
-            
+    }
+    
+    func getAcessToken() -> String?{
+        return accessToken
     }
 }
 

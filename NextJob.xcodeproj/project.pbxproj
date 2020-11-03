@@ -3,11 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2340CA68C61A05137A66FCA9 /* Pods_NextJobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9F6B5A660A5D4F54A6DD9F /* Pods_NextJobTests.framework */; };
+		ABD54AABCF591AA5C74ED056 /* Pods_NextJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEC50C2F1B8672C25D24F7D /* Pods_NextJob.framework */; };
+		B991CC4466A5D0566F376935 /* Pods_NextJob_NextJobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE326B29E0404DF9D4ABC93 /* Pods_NextJob_NextJobUITests.framework */; };
 		DF65E879253F5B91002D4D5C /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65E878253F5B91002D4D5C /* RegisterController.swift */; };
+		DF81E48525471F8400B6735A /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81E48425471F8400B6735A /* JobsViewController.swift */; };
+		DF81E48A2547251900B6735A /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81E4892547251900B6735A /* JobModel.swift */; };
+		DF81E48F2547288400B6735A /* JobsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81E48E2547288400B6735A /* JobsManager.swift */; };
 		DF8B4810253F399B00276742 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4804253F395100276742 /* Nunito-SemiBold.ttf */; };
 		DF8B4818253F3BBE00276742 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4814253F3BBE00276742 /* NotoSans-BoldItalic.ttf */; };
 		DF8B4819253F3BBE00276742 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4815253F3BBE00276742 /* NotoSans-Italic.ttf */; };
@@ -16,6 +22,12 @@
 		DFA20D62254064E800033286 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA20D61254064E800033286 /* LoginManager.swift */; };
 		DFA20D7725409B0900033286 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA20D7625409B0900033286 /* LoginData.swift */; };
 		DFA20D7C2540B9C100033286 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA20D7B2540B9C000033286 /* LoginModel.swift */; };
+		DFA500372549AC0900FD228C /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA500352549AC0900FD228C /* JobCell.swift */; };
+		DFA500382549AC0900FD228C /* JobCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA500362549AC0900FD228C /* JobCell.xib */; };
+		DFA5003D2549B3B100FD228C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5003C2549B3B100FD228C /* Constants.swift */; };
+		DFAE105C2541D095002A1557 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE105B2541D095002A1557 /* GenderViewController.swift */; };
+		DFAE1061254216A3002A1557 /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE1060254216A2002A1557 /* RegisterManager.swift */; };
+		DFAE106625421765002A1557 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAE106525421765002A1557 /* RegisterData.swift */; };
 		DFB29FAD253DF3B7009133BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FAC253DF3B7009133BC /* AppDelegate.swift */; };
 		DFB29FAF253DF3B7009133BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FAE253DF3B7009133BC /* SceneDelegate.swift */; };
 		DFB29FB1253DF3B7009133BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FB0253DF3B7009133BC /* LoginViewController.swift */; };
@@ -24,6 +36,7 @@
 		DFB29FB9253DF3BB009133BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB29FB7253DF3BB009133BC /* LaunchScreen.storyboard */; };
 		DFB29FC4253DF3BC009133BC /* NextJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FC3253DF3BC009133BC /* NextJobTests.swift */; };
 		DFB29FCF253DF3BC009133BC /* NextJobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB29FCE253DF3BC009133BC /* NextJobUITests.swift */; };
+		DFECF2A525476422008D91BF /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFECF2A425476422008D91BF /* JobData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +57,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		096548DF59E239C31B16D1EE /* Pods-NextJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextJob.debug.xcconfig"; path = "Target Support Files/Pods-NextJob/Pods-NextJob.debug.xcconfig"; sourceTree = "<group>"; };
+		2DE326B29E0404DF9D4ABC93 /* Pods_NextJob_NextJobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextJob_NextJobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0E43A9514868E10495553F /* Pods-NextJobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextJobTests.debug.xcconfig"; path = "Target Support Files/Pods-NextJobTests/Pods-NextJobTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66681FB2B833005303F49EF8 /* Pods-NextJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextJob.release.xcconfig"; path = "Target Support Files/Pods-NextJob/Pods-NextJob.release.xcconfig"; sourceTree = "<group>"; };
+		82D41CFF806AA8B6110ABD32 /* Pods-NextJobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextJobTests.release.xcconfig"; path = "Target Support Files/Pods-NextJobTests/Pods-NextJobTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C9F6B5A660A5D4F54A6DD9F /* Pods_NextJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EEC50C2F1B8672C25D24F7D /* Pods_NextJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F6FBFE2FEDA8E1590C1A98 /* Pods-NextJob-NextJobUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextJob-NextJobUITests.debug.xcconfig"; path = "Target Support Files/Pods-NextJob-NextJobUITests/Pods-NextJob-NextJobUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF65E878253F5B91002D4D5C /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		DF81E48425471F8400B6735A /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		DF81E4892547251900B6735A /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		DF81E48E2547288400B6735A /* JobsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsManager.swift; sourceTree = "<group>"; };
 		DF8B4802253F395100276742 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Italic.ttf"; path = "../../../../../Downloads/Nunito/Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		DF8B4803253F395100276742 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Black.ttf"; path = "../../../../../Downloads/Nunito/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		DF8B4804253F395100276742 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-SemiBold.ttf"; path = "../../../../../Downloads/Nunito/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -66,6 +90,12 @@
 		DFA20D61254064E800033286 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		DFA20D7625409B0900033286 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		DFA20D7B2540B9C000033286 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		DFA500352549AC0900FD228C /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		DFA500362549AC0900FD228C /* JobCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCell.xib; sourceTree = "<group>"; };
+		DFA5003C2549B3B100FD228C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DFAE105B2541D095002A1557 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		DFAE1060254216A2002A1557 /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
+		DFAE106525421765002A1557 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
 		DFB29FA9253DF3B7009133BC /* NextJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB29FAC253DF3B7009133BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFB29FAE253DF3B7009133BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +110,8 @@
 		DFB29FCA253DF3BC009133BC /* NextJobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextJobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB29FCE253DF3BC009133BC /* NextJobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextJobUITests.swift; sourceTree = "<group>"; };
 		DFB29FD0253DF3BC009133BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFECF2A425476422008D91BF /* JobData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
+		E5E4B0DEBAA597F12726028A /* Pods-NextJob-NextJobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextJob-NextJobUITests.release.xcconfig"; path = "Target Support Files/Pods-NextJob-NextJobUITests/Pods-NextJob-NextJobUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD54AABCF591AA5C74ED056 /* Pods_NextJob.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2340CA68C61A05137A66FCA9 /* Pods_NextJobTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +135,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B991CC4466A5D0566F376935 /* Pods_NextJob_NextJobUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AD02A8A8A36BFB4B6B576CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC50C2F1B8672C25D24F7D /* Pods_NextJob.framework */,
+				2DE326B29E0404DF9D4ABC93 /* Pods_NextJob_NextJobUITests.framework */,
+				8C9F6B5A660A5D4F54A6DD9F /* Pods_NextJobTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BA3CF789541EFE18FC80324 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				096548DF59E239C31B16D1EE /* Pods-NextJob.debug.xcconfig */,
+				66681FB2B833005303F49EF8 /* Pods-NextJob.release.xcconfig */,
+				C3F6FBFE2FEDA8E1590C1A98 /* Pods-NextJob-NextJobUITests.debug.xcconfig */,
+				E5E4B0DEBAA597F12726028A /* Pods-NextJob-NextJobUITests.release.xcconfig */,
+				5D0E43A9514868E10495553F /* Pods-NextJobTests.debug.xcconfig */,
+				82D41CFF806AA8B6110ABD32 /* Pods-NextJobTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DF8B4801253F393C00276742 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +197,8 @@
 				DFB29FC2253DF3BC009133BC /* NextJobTests */,
 				DFB29FCD253DF3BC009133BC /* NextJobUITests */,
 				DFB29FAA253DF3B7009133BC /* Products */,
+				4BA3CF789541EFE18FC80324 /* Pods */,
+				0AD02A8A8A36BFB4B6B576CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +224,7 @@
 				DFB29FB5253DF3BB009133BC /* Assets.xcassets */,
 				DFB29FB7253DF3BB009133BC /* LaunchScreen.storyboard */,
 				DFB29FBA253DF3BB009133BC /* Info.plist */,
+				DFA5003C2549B3B100FD228C /* Constants.swift */,
 			);
 			path = NextJob;
 			sourceTree = "<group>";
@@ -192,6 +253,11 @@
 				DFA20D61254064E800033286 /* LoginManager.swift */,
 				DFA20D7625409B0900033286 /* LoginData.swift */,
 				DFA20D7B2540B9C000033286 /* LoginModel.swift */,
+				DFAE1060254216A2002A1557 /* RegisterManager.swift */,
+				DFAE106525421765002A1557 /* RegisterData.swift */,
+				DF81E4892547251900B6735A /* JobModel.swift */,
+				DF81E48E2547288400B6735A /* JobsManager.swift */,
+				DFECF2A425476422008D91BF /* JobData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				DFB29FB2253DF3B7009133BC /* Main.storyboard */,
+				DFA500352549AC0900FD228C /* JobCell.swift */,
+				DFA500362549AC0900FD228C /* JobCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +277,8 @@
 			children = (
 				DFB29FB0253DF3B7009133BC /* LoginViewController.swift */,
 				DF65E878253F5B91002D4D5C /* RegisterController.swift */,
+				DFAE105B2541D095002A1557 /* GenderViewController.swift */,
+				DF81E48425471F8400B6735A /* JobsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFB29FD3253DF3BC009133BC /* Build configuration list for PBXNativeTarget "NextJob" */;
 			buildPhases = (
+				571FFC051E958759F264BB13 /* [CP] Check Pods Manifest.lock */,
 				DFB29FA5253DF3B7009133BC /* Sources */,
 				DFB29FA6253DF3B7009133BC /* Frameworks */,
 				DFB29FA7253DF3B7009133BC /* Resources */,
+				076CF473F407E58FA8A79811 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFB29FD6253DF3BC009133BC /* Build configuration list for PBXNativeTarget "NextJobTests" */;
 			buildPhases = (
+				714FE1FD1EDAA7F3315D0114 /* [CP] Check Pods Manifest.lock */,
 				DFB29FBB253DF3BC009133BC /* Sources */,
 				DFB29FBC253DF3BC009133BC /* Frameworks */,
 				DFB29FBD253DF3BC009133BC /* Resources */,
@@ -255,9 +328,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFB29FD9253DF3BC009133BC /* Build configuration list for PBXNativeTarget "NextJobUITests" */;
 			buildPhases = (
+				11CF5099E5DE780D118A5EF7 /* [CP] Check Pods Manifest.lock */,
 				DFB29FC6253DF3BC009133BC /* Sources */,
 				DFB29FC7253DF3BC009133BC /* Frameworks */,
 				DFB29FC8253DF3BC009133BC /* Resources */,
+				2FC7DABAFFA5E33974185DBC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +397,7 @@
 				DF8B481A253F3BBE00276742 /* NotoSans-Bold.ttf in Resources */,
 				DF8B481B253F3BBE00276742 /* NotoSans-Regular.ttf in Resources */,
 				DF8B4819253F3BBE00276742 /* NotoSans-Italic.ttf in Resources */,
+				DFA500382549AC0900FD228C /* JobCell.xib in Resources */,
 				DFB29FB6253DF3BB009133BC /* Assets.xcassets in Resources */,
 				DFB29FB4253DF3B7009133BC /* Main.storyboard in Resources */,
 			);
@@ -343,17 +419,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		076CF473F407E58FA8A79811 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextJob/Pods-NextJob-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextJob/Pods-NextJob-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NextJob/Pods-NextJob-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11CF5099E5DE780D118A5EF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NextJob-NextJobUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FC7DABAFFA5E33974185DBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextJob-NextJobUITests/Pods-NextJob-NextJobUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextJob-NextJobUITests/Pods-NextJob-NextJobUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NextJob-NextJobUITests/Pods-NextJob-NextJobUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		571FFC051E958759F264BB13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NextJob-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		714FE1FD1EDAA7F3315D0114 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NextJobTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DFB29FA5253DF3B7009133BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DFA20D62254064E800033286 /* LoginManager.swift in Sources */,
+				DFA500372549AC0900FD228C /* JobCell.swift in Sources */,
+				DFAE105C2541D095002A1557 /* GenderViewController.swift in Sources */,
 				DFA20D7C2540B9C100033286 /* LoginModel.swift in Sources */,
 				DF65E879253F5B91002D4D5C /* RegisterController.swift in Sources */,
 				DFB29FB1253DF3B7009133BC /* LoginViewController.swift in Sources */,
+				DF81E48A2547251900B6735A /* JobModel.swift in Sources */,
+				DFA5003D2549B3B100FD228C /* Constants.swift in Sources */,
+				DFAE1061254216A3002A1557 /* RegisterManager.swift in Sources */,
 				DFB29FAD253DF3B7009133BC /* AppDelegate.swift in Sources */,
+				DF81E48F2547288400B6735A /* JobsManager.swift in Sources */,
 				DFB29FAF253DF3B7009133BC /* SceneDelegate.swift in Sources */,
+				DFAE106625421765002A1557 /* RegisterData.swift in Sources */,
+				DFECF2A525476422008D91BF /* JobData.swift in Sources */,
+				DF81E48525471F8400B6735A /* JobsViewController.swift in Sources */,
 				DFA20D7725409B0900033286 /* LoginData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +715,7 @@
 		};
 		DFB29FD4253DF3BC009133BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 096548DF59E239C31B16D1EE /* Pods-NextJob.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -545,6 +734,7 @@
 		};
 		DFB29FD5253DF3BC009133BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66681FB2B833005303F49EF8 /* Pods-NextJob.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -563,6 +753,7 @@
 		};
 		DFB29FD7253DF3BC009133BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D0E43A9514868E10495553F /* Pods-NextJobTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +775,7 @@
 		};
 		DFB29FD8253DF3BC009133BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D41CFF806AA8B6110ABD32 /* Pods-NextJobTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -605,6 +797,7 @@
 		};
 		DFB29FDA253DF3BC009133BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F6FBFE2FEDA8E1590C1A98 /* Pods-NextJob-NextJobUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -624,6 +817,7 @@
 		};
 		DFB29FDB253DF3BC009133BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E4B0DEBAA597F12726028A /* Pods-NextJob-NextJobUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

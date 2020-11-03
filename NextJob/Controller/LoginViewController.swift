@@ -17,8 +17,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let defaults = UserDefaults.standard
-        defaults.setValue("", forKey: "sessionToken")
+//        let defaults = UserDefaults.standard
+//        defaults.setValue("", forKey: "sessionToken")
         
     }
 
@@ -31,8 +31,8 @@ class LoginViewController: UIViewController {
         if validations() {
             let loginManager = LoginManager()
             loginManager.login(username: usernameField.text!, password: passwordField.text!)
-            if let token = UserDefaults.standard.string(forKey: "sessionToken") {
-            
+            sleep(1)
+            if let token = loginManager.getAcessToken() {
             if token.count > 1 {
                 performSegue(withIdentifier: "goToMain", sender: self)
             }

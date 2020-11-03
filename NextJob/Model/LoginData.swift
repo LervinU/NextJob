@@ -11,9 +11,6 @@ import Foundation
 struct LoginData: Decodable {
     var accessToken: String?
     
-//    func getAccessToken() -> String {
-//        return accessToken
-//    }
     
     
 }
