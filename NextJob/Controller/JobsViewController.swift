@@ -32,6 +32,18 @@ class JobsViewController: UIViewController {
         searchBar.searchTextField.font = UIFont(name: "Nunito-Bold", size: 17.0)
         
 
+        alphaFilter.layer.borderColor = #colorLiteral(red: 0.3562973142, green: 0.355602622, blue: 0.9289687872, alpha: 1)
+        alphaFilter.layer.borderWidth = 1
+
+
+        dateFilter.layer.borderColor = #colorLiteral(red: 0.3562973142, green: 0.355602622, blue: 0.9289687872, alpha: 1)
+        dateFilter.layer.borderWidth = 1
+        
+
+        positionFilter.layer.borderColor = #colorLiteral(red: 0.3562973142, green: 0.355602622, blue: 0.9289687872, alpha: 1)
+        positionFilter.layer.borderWidth = 1
+        
+
         
         getJobs() { result in
             self.jobs = result
@@ -48,15 +60,26 @@ class JobsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == K.detailSegueIdentifier) {
+            let carouselVC = segue.destination as! CarouselViewController
+            carouselVC.jobs = self.jobs
+        }
+    }
+    
     
     @IBAction func filterAlpha(_ sender: UIButton) {
         positionFilterActive = false
         self.filteredJobs = self.jobs?.sorted{$0.name! < $1.name!}
+        
+        alphaBtnChange()
         self.tableView.reloadData()
     }
     @IBAction func filterDate(_ sender: Any) {
         positionFilterActive = false
         self.filteredJobs = self.jobs?.sorted{$0.creationDate! > $1.creationDate!}
+        
+        dateBtnChange()
         self.tableView.reloadData()
     }
     @IBAction func filterPosition(_ sender: UIButton) {
@@ -78,9 +101,14 @@ class JobsViewController: UIViewController {
             }
         }
         self.filterByPosition = tempArr
+        positionBtnChange()
         self.tableView.reloadData()
         tempArr = []
+        
+
+
     }
+    
     
     func getJobs(_ completion: @escaping (_ result: [JobData]?)->()) {
         let jobsManager = JobsManager()
@@ -121,6 +149,38 @@ class JobsViewController: UIViewController {
         }
     }
     
+    func alphaBtnChange() {
+        alphaFilter.backgroundColor = #colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1)
+        alphaFilter.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
+        dateFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        dateFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
+        
+        positionFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        positionFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
+    }
+    
+    func dateBtnChange() {
+        dateFilter.backgroundColor = #colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1)
+        dateFilter.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
+        alphaFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        alphaFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
+        
+        positionFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        positionFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
+    }
+    
+    func positionBtnChange() {
+        positionFilter.backgroundColor = #colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1)
+        positionFilter.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
+        dateFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        dateFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
+        
+        alphaFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        alphaFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
+    }
 
 }
 
@@ -171,16 +231,6 @@ extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if positionFilterActive == true {
-//            if section < K.headerTitles.count {
-//                return K.headerTitles[section]
-//            }
-//        }
-//        return nil
-//    }
-    
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if positionFilterActive == true {
             let view = UIView()
@@ -196,13 +246,9 @@ extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
             label.font = UIFont(name: "NotoSans-Bold", size: 17)
             label.frame = CGRect(x: 160, y: 5, width: 200, height: 35)
             view.addSubview(label)
-            
-            
-            
 
             return view
         }
-
        return nil
     }
 
@@ -212,6 +258,10 @@ extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
         }
             return 0
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "carousel", sender: self)
+    }
 }
 
 extension JobsViewController: UISearchBarDelegate {

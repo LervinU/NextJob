@@ -18,5 +18,7 @@ target 'NextJob' do
 
   pod 'Alamofire', '~> 5.3'
 
+  pod 'iCarousel', '~> 1.8'
+
 
 end

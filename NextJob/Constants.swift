@@ -21,4 +21,5 @@ struct K {
         UIImage(named: "marketingWhite")!,
         UIImage(named: "contabilidadWhite")!
     ]
+    static let detailSegueIdentifier = "carousel"
 }

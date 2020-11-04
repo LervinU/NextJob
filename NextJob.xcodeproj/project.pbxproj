@@ -14,6 +14,7 @@
 		DF81E48525471F8400B6735A /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81E48425471F8400B6735A /* JobsViewController.swift */; };
 		DF81E48A2547251900B6735A /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81E4892547251900B6735A /* JobModel.swift */; };
 		DF81E48F2547288400B6735A /* JobsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81E48E2547288400B6735A /* JobsManager.swift */; };
+		DF82559F2551D9E000015E03 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82559E2551D9E000015E03 /* CarouselViewController.swift */; };
 		DF8B4810253F399B00276742 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4804253F395100276742 /* Nunito-SemiBold.ttf */; };
 		DF8B4818253F3BBE00276742 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4814253F3BBE00276742 /* NotoSans-BoldItalic.ttf */; };
 		DF8B4819253F3BBE00276742 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF8B4815253F3BBE00276742 /* NotoSans-Italic.ttf */; };
@@ -69,6 +70,7 @@
 		DF81E48425471F8400B6735A /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		DF81E4892547251900B6735A /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		DF81E48E2547288400B6735A /* JobsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsManager.swift; sourceTree = "<group>"; };
+		DF82559E2551D9E000015E03 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		DF8B4802253F395100276742 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Italic.ttf"; path = "../../../../../Downloads/Nunito/Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		DF8B4803253F395100276742 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Black.ttf"; path = "../../../../../Downloads/Nunito/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		DF8B4804253F395100276742 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-SemiBold.ttf"; path = "../../../../../Downloads/Nunito/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				DF65E878253F5B91002D4D5C /* RegisterController.swift */,
 				DFAE105B2541D095002A1557 /* GenderViewController.swift */,
 				DF81E48425471F8400B6735A /* JobsViewController.swift */,
+				DF82559E2551D9E000015E03 /* CarouselViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				DFA500372549AC0900FD228C /* JobCell.swift in Sources */,
 				DFAE105C2541D095002A1557 /* GenderViewController.swift in Sources */,
 				DFA20D7C2540B9C100033286 /* LoginModel.swift in Sources */,
+				DF82559F2551D9E000015E03 /* CarouselViewController.swift in Sources */,
 				DF65E879253F5B91002D4D5C /* RegisterController.swift in Sources */,
 				DFB29FB1253DF3B7009133BC /* LoginViewController.swift in Sources */,
 				DF81E48A2547251900B6735A /* JobModel.swift in Sources */,
