@@ -11,6 +11,7 @@ import iCarousel
 class CarouselViewController: UIViewController, iCarouselDataSource {
     
     var jobs: [JobData]?
+    var selectedJobIndex: Int?
 
     @IBOutlet weak var bgView: UIView!
     
@@ -29,6 +30,10 @@ class CarouselViewController: UIViewController, iCarouselDataSource {
                                 y: 300,
                                 width: view.frame.size.width,
                                 height: 400)
+        if let safeIndex = selectedJobIndex {
+            carousel.scrollToItem(at: safeIndex, animated: false)
+        }
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func goBack(_ sender: UIButton) {

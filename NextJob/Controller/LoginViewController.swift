@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
 //        let defaults = UserDefaults.standard
 //        defaults.setValue("", forKey: "sessionToken")
+        usernameField.delegate = self
+        passwordField.delegate = self
         
     }
 
@@ -59,3 +61,13 @@ class LoginViewController: UIViewController {
     }
 }
 
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return usernameField.resignFirstResponder() || passwordField.resignFirstResponder()
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.self.endEditing(true)
+    }
+}

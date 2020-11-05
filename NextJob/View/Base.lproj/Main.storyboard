@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -127,16 +126,21 @@
                                         <color key="backgroundColor" red="0.79672880678061131" green="0.80953087338419805" blue="0.82592401649746194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v31-IZ-ahD">
-                                        <rect key="frame" x="48" y="67" width="45" height="40"/>
+                                        <rect key="frame" x="44" y="70" width="45" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
                                         <connections>
                                             <action selector="goBack:" destination="z5x-Xd-upD" eventType="touchUpInside" id="eLh-yd-d21"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backPurple" translatesAutoresizingMaskIntoConstraints="NO" id="uuc-qG-5YD">
+                                        <rect key="frame" x="11" y="72" width="33" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -205,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9J2-Wg-ShM">
-                                <rect key="frame" x="87" y="93" width="240" height="128"/>
+                                <rect key="frame" x="87" y="89" width="240" height="128"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Iconos nexusJob Color" translatesAutoresizingMaskIntoConstraints="NO" id="vAg-dy-QOj">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -213,10 +217,12 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YtV-ci-845"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgs-rH-hLm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgs-rH-hLm">
                                 <rect key="frame" x="42" y="278" width="330" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUu-Mf-KVY">
                                         <rect key="frame" x="8" y="8" width="60" height="24"/>
@@ -267,24 +273,33 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="a9D-qJ-eBL"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Olvidó su contraseña?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-Fs-sfe">
-                                <rect key="frame" x="194" y="468" width="197" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Olvidó su contraseña?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-Fs-sfe">
+                                <rect key="frame" x="187" y="468" width="185" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="HSk-VZ-FNE"/>
+                                    <constraint firstAttribute="height" constant="22" id="cIa-FS-DaS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
                                 <color key="textColor" red="0.074509803921568626" green="0.20392156862745098" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx9-dJ-7Se">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx9-dJ-7Se">
                                 <rect key="frame" x="42" y="544" width="332" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.28235294117647058" green="0.24313725490196078" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="332" id="3s5-XJ-nGC"/>
+                                    <constraint firstAttribute="height" constant="49" id="ErE-fn-Y7p"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="18"/>
                                 <state key="normal" title="Iniciar Sesión">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -298,10 +313,13 @@
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OiD-sT-iIg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-wx-NP6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-wx-NP6">
                                 <rect key="frame" x="42" y="601" width="332" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.20392156862745098" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="ZEE-Bv-kIc"/>
+                                    <constraint firstAttribute="width" constant="332" id="cBe-O1-wL3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="18"/>
                                 <state key="normal" title="Registrarme">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,7 +359,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
@@ -357,7 +375,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
@@ -373,7 +391,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
@@ -384,10 +402,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9J2-Wg-ShM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="2ee-xN-PnQ"/>
+                            <constraint firstItem="9J2-Wg-ShM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="2ee-xN-PnQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SsY-wx-NP6" secondAttribute="trailing" constant="40" id="4J6-wy-AfJ"/>
                             <constraint firstItem="9J2-Wg-ShM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="7hf-dt-lAr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9J2-Wg-ShM" secondAttribute="bottom" constant="641" id="KBM-3M-Ay0"/>
+                            <constraint firstItem="Gx9-dJ-7Se" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="GAr-Xb-6ch"/>
+                            <constraint firstItem="2iQ-Fs-sfe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="187" id="HxT-Ue-u0H"/>
+                            <constraint firstItem="SsY-wx-NP6" firstAttribute="top" secondItem="Gx9-dJ-7Se" secondAttribute="bottom" constant="8" symbolic="YES" id="Obd-If-8zI"/>
+                            <constraint firstItem="Fgs-rH-hLm" firstAttribute="top" secondItem="9J2-Wg-ShM" secondAttribute="bottom" constant="61" id="TeF-HG-XxE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gx9-dJ-7Se" secondAttribute="trailing" constant="40" id="Th7-8F-V3n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9J2-Wg-ShM" secondAttribute="trailing" constant="87" id="h9K-gK-jfc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2iQ-Fs-sfe" secondAttribute="trailing" constant="42" id="lNf-DD-ByS"/>
+                            <constraint firstItem="Fgs-rH-hLm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="m5R-jE-vf3"/>
+                            <constraint firstItem="SsY-wx-NP6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="p9E-I4-lSJ"/>
+                            <constraint firstItem="2iQ-Fs-sfe" firstAttribute="top" secondItem="Fgs-rH-hLm" secondAttribute="bottom" constant="16" id="vFr-cE-TkN"/>
+                            <constraint firstItem="Gx9-dJ-7Se" firstAttribute="top" secondItem="2iQ-Fs-sfe" secondAttribute="bottom" constant="54" id="wOw-Zl-fTd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fgs-rH-hLm" secondAttribute="trailing" constant="42" id="z0P-EU-ccA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -565,7 +594,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="10"/>
@@ -586,7 +615,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="10"/>
@@ -607,7 +636,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="10"/>
@@ -755,9 +784,7 @@
         <image name="Iconos Linkedin" width="125.58000183105469" height="100.44000244140625"/>
         <image name="Iconos configuracion" width="125.58000183105469" height="100.44000244140625"/>
         <image name="Iconos nexusJob Color" width="315.6099853515625" height="252.44000244140625"/>
+        <image name="backPurple" width="288" height="288"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

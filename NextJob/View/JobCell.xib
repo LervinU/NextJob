@@ -22,10 +22,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rw-0h-och">
-                        <rect key="frame" x="0.0" y="0.0" width="366.5" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="373.5" height="120"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="NIY-67-vZb">
-                                <rect key="frame" x="10" y="10" width="346.5" height="100"/>
+                                <rect key="frame" x="10" y="10" width="353.5" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-nG-xwD">
                                         <rect key="frame" x="0.0" y="10" width="70" height="80"/>
@@ -99,26 +99,30 @@
                                             <constraint firstAttribute="height" constant="90" id="OP6-cq-Nwr"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareLightPurple" translatesAutoresizingMaskIntoConstraints="NO" id="BEd-Ev-PGe">
-                                        <rect key="frame" x="311.5" y="65" width="25" height="25"/>
-                                        <color key="tintColor" red="0.28235294119999998" green="0.24313725489999999" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSd-70-Den">
+                                        <rect key="frame" x="303.5" y="25" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="HdC-wz-Flx"/>
-                                            <constraint firstAttribute="height" constant="25" id="aKl-Na-blf"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ecy-Cn-L90"/>
+                                            <constraint firstAttribute="width" constant="50" id="hN6-Jx-zgN"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="shareLightPurple"/>
+                                        <connections>
+                                            <action selector="shareBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="n8c-nC-wZk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="HZi-3o-xik" firstAttribute="leading" secondItem="Kxf-nG-xwD" secondAttribute="trailing" constant="10" id="1hT-kb-aC4"/>
                                     <constraint firstItem="Kxf-nG-xwD" firstAttribute="top" secondItem="NIY-67-vZb" secondAttribute="top" constant="10" id="Euj-Iq-X26"/>
+                                    <constraint firstItem="XSd-70-Den" firstAttribute="leading" secondItem="fBf-zg-cnh" secondAttribute="trailing" constant="10" id="Fc5-EA-OXN"/>
+                                    <constraint firstItem="XSd-70-Den" firstAttribute="top" secondItem="NIY-67-vZb" secondAttribute="top" constant="25" id="GNj-CD-vKg"/>
                                     <constraint firstAttribute="bottom" secondItem="Kxf-nG-xwD" secondAttribute="bottom" constant="10" id="Jlf-uq-XlT"/>
                                     <constraint firstItem="fBf-zg-cnh" firstAttribute="top" secondItem="NIY-67-vZb" secondAttribute="top" constant="5" id="TUq-FB-O0G"/>
                                     <constraint firstItem="fBf-zg-cnh" firstAttribute="leading" secondItem="HZi-3o-xik" secondAttribute="trailing" constant="170" id="f4U-7U-AQO"/>
                                     <constraint firstAttribute="bottom" secondItem="Kxf-nG-xwD" secondAttribute="bottom" constant="10" id="hat-ee-0mS"/>
-                                    <constraint firstItem="BEd-Ev-PGe" firstAttribute="leading" secondItem="fBf-zg-cnh" secondAttribute="trailing" constant="18" id="jlz-Xk-fiO"/>
                                     <constraint firstAttribute="height" constant="100" id="lNc-1H-LYf"/>
                                     <constraint firstAttribute="bottom" secondItem="fBf-zg-cnh" secondAttribute="bottom" constant="5" id="nK7-rI-6xO"/>
-                                    <constraint firstAttribute="trailing" secondItem="BEd-Ev-PGe" secondAttribute="trailing" constant="10" id="rta-pd-Zc3"/>
+                                    <constraint firstAttribute="bottom" secondItem="XSd-70-Den" secondAttribute="bottom" constant="25" id="zLW-yl-XXX"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -145,6 +149,7 @@
                 <outlet property="jobImage" destination="ihd-dU-FZS" id="3N3-8z-PYV"/>
                 <outlet property="jobShortDesc" destination="uP1-tQ-9OW" id="dk3-49-fZm"/>
                 <outlet property="jobTitle" destination="K3A-ZK-zg3" id="Qza-nB-uwd"/>
+                <outlet property="shareBtn" destination="XSd-70-Den" id="XRJ-ZQ-4R7"/>
             </connections>
             <point key="canvasLocation" x="159.42028985507247" y="140.625"/>
         </tableViewCell>

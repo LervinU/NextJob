@@ -13,8 +13,11 @@ class JobsViewController: UIViewController {
     var filteredJobs: [JobData]?
     var filterByPosition = [[JobData]]()
     
+    var selectedJob: Int?
     var searchActive = false
     var positionFilterActive: Bool?
+    var alphaFilterActive:Bool?
+    var dateFilterActive: Bool?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -26,6 +29,8 @@ class JobsViewController: UIViewController {
         super.viewDidLoad()
         
         positionFilterActive = false
+        alphaFilterActive = false
+        dateFilterActive = false
         
         searchBar.searchTextField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         searchBar.searchTextField.textColor = #colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1)
@@ -64,11 +69,14 @@ class JobsViewController: UIViewController {
         if(segue.identifier == K.detailSegueIdentifier) {
             let carouselVC = segue.destination as! CarouselViewController
             carouselVC.jobs = self.jobs
+            carouselVC.selectedJobIndex = findJobIndex(id: self.selectedJob!)
         }
     }
     
     
     @IBAction func filterAlpha(_ sender: UIButton) {
+        alphaFilterActive = true
+        dateFilterActive = false
         positionFilterActive = false
         self.filteredJobs = self.jobs?.sorted{$0.name! < $1.name!}
         
@@ -76,6 +84,8 @@ class JobsViewController: UIViewController {
         self.tableView.reloadData()
     }
     @IBAction func filterDate(_ sender: Any) {
+        dateFilterActive = true
+        alphaFilterActive = false
         positionFilterActive = false
         self.filteredJobs = self.jobs?.sorted{$0.creationDate! > $1.creationDate!}
         
@@ -85,6 +95,8 @@ class JobsViewController: UIViewController {
     @IBAction func filterPosition(_ sender: UIButton) {
         var tempArr = [[JobData]]()
         positionFilterActive = true
+        dateFilterActive = false
+        alphaFilterActive = false
         for _ in 0...2 {
             tempArr.append([JobData]())
         }
@@ -149,6 +161,15 @@ class JobsViewController: UIViewController {
         }
     }
     
+    func findJobIndex(id: Int) -> Int? {
+        for index in 0...jobs!.count - 1 {
+            if jobs![index].id == id {
+                return index
+            }
+        }
+        return nil
+    }
+    
     func alphaBtnChange() {
         alphaFilter.backgroundColor = #colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1)
         alphaFilter.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
@@ -181,8 +202,14 @@ class JobsViewController: UIViewController {
         alphaFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         alphaFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
     }
-
+    
+    func shareInformation(title: String, desc: String) {
+        let shareInfo = ["\(title) \n\(desc) \nEnlace: www.google.com"]
+        let ac = UIActivityViewController(activityItems: shareInfo, applicationActivities: nil)
+        self.present(ac, animated: true)
+    }
 }
+
 
 extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -207,6 +234,9 @@ extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.imgSquare.layer.borderWidth = 2.0
             cell.imgSquare.layer.borderColor = #colorLiteral(red: 0.3562973142, green: 0.355602622, blue: 0.9289687872, alpha: 1)
             cell.jobImage.image = self.selectImage(department: cellData.department!)
+            cell.onSharePressed = {
+                self.shareInformation(title: cellData.name!, desc: cellData.longDescription!)
+            }
             
             return cell
         } else {
@@ -217,6 +247,9 @@ extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.imgSquare.layer.borderWidth = 2.0
                 cell.imgSquare.layer.borderColor = #colorLiteral(red: 0.3562973142, green: 0.355602622, blue: 0.9289687872, alpha: 1)
                 cell.jobImage.image = self.selectImage(department: safeText.department!)
+                cell.onSharePressed = {
+                    self.shareInformation(title: safeText.name!, desc: safeText.longDescription!)
+                }
 
                 return cell
             }
@@ -260,6 +293,15 @@ extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
         }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if positionFilterActive == true {
+            self.selectedJob = self.filterByPosition[indexPath.section][indexPath.row].id
+        }
+        else if alphaFilterActive == true || dateFilterActive == true {
+            self.selectedJob = self.filteredJobs![indexPath.row].id
+        }
+        else {
+            self.selectedJob = self.jobs![indexPath.row].id
+        }
         performSegue(withIdentifier: "carousel", sender: self)
     }
 }
@@ -267,6 +309,8 @@ extension JobsViewController: UITableViewDataSource, UITableViewDelegate {
 extension JobsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.positionFilterActive = false
+        self.alphaFilterActive = false
+        self.dateFilterActive = false
         self.filteredJobs = searchText.isEmpty ? self.jobs : jobs?.filter { (item: JobData) -> Bool in
             // If dataItem matches the searchText, return true to include it
             return item.name?.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil

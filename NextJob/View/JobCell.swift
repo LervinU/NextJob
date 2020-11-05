@@ -8,13 +8,14 @@ import UIKit
 
 class JobCell: UITableViewCell {
     
-    
+    var onSharePressed: (() -> Void)? = nil
 
     @IBOutlet weak var jobTitle: UILabel!
     @IBOutlet weak var jobShortDesc: UILabel!
     @IBOutlet weak var jobDate: UILabel!
     @IBOutlet weak var imgSquare: UIView!
     @IBOutlet var jobImage: UIImageView!
+    @IBOutlet weak var shareBtn: UIButton!
     
     
     override func awakeFromNib() {
@@ -24,7 +25,7 @@ class JobCell: UITableViewCell {
         imgSquare.layer.shadowOpacity = 0.5
         imgSquare.layer.shadowOffset = CGSize(width: 3, height: 3)
         imgSquare.layer.shadowRadius = 1
-        
+        shareBtn.imageView?.contentMode = .scaleAspectFit
 
         // Initialization code
     }
@@ -35,4 +36,7 @@ class JobCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func shareBtnPressed(_ sender: UIButton) {
+        onSharePressed?()
+    }
 }
