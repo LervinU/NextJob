@@ -24,6 +24,18 @@ class JobsViewController: UIViewController {
     @IBOutlet weak var alphaFilter: UIButton!
     @IBOutlet weak var dateFilter: UIButton!
     @IBOutlet weak var positionFilter: UIButton!
+    @IBOutlet weak var btnProfile: UIButton!
+    @IBOutlet weak var btnVacancies: UIButton!
+    @IBOutlet weak var btnConfig: UIButton!
+    @IBOutlet weak var profileView: UIView!
+    @IBOutlet weak var vacanciesView: UIView!
+    @IBOutlet weak var configView: UIView!
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var vacanciesImg: UIImageView!
+    @IBOutlet weak var configImg: UIImageView!
+    @IBOutlet weak var profileText: UILabel!
+    @IBOutlet weak var vacanciesText: UILabel!
+    @IBOutlet weak var configText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +60,7 @@ class JobsViewController: UIViewController {
         positionFilter.layer.borderColor = #colorLiteral(red: 0.3562973142, green: 0.355602622, blue: 0.9289687872, alpha: 1)
         positionFilter.layer.borderWidth = 1
         
-
+        setMenuInitialState()
         
         getJobs() { result in
             self.jobs = result
@@ -73,6 +85,40 @@ class JobsViewController: UIViewController {
         }
     }
     
+    @IBAction func onPressedProfile(_ sender: UIButton) {
+        self.vacanciesView.isHidden = true
+        self.vacanciesImg.image = UIImage(named: "listWhite")
+        self.vacanciesText.textColor = UIColor.white
+        self.configView.isHidden = true
+        self.configImg.image = UIImage(named: "configWhite")
+        self.configText.textColor = UIColor.white
+        self.profileView.isHidden = false
+        self.profileImg.image = UIImage(named: "profilePurple")
+        self.profileText.textColor = #colorLiteral(red: 0.2823529412, green: 0.2431372549, blue: 0.9098039216, alpha: 1)
+        
+    }
+    @IBAction func onPressedVacancies(_ sender: UIButton) {
+        self.vacanciesView.isHidden = false
+        self.vacanciesImg.image = UIImage(named: "listPurple")
+        self.vacanciesText.textColor = #colorLiteral(red: 0.2823529412, green: 0.2431372549, blue: 0.9098039216, alpha: 1)
+        self.configView.isHidden = true
+        self.configImg.image = UIImage(named: "configWhite")
+        self.configText.textColor = UIColor.white
+        self.profileView.isHidden = true
+        self.profileImg.image = UIImage(named: "profileWhite")
+        self.profileText.textColor = UIColor.white
+    }
+    @IBAction func onPressedConfig(_ sender: UIButton) {
+        self.vacanciesView.isHidden = true
+        self.vacanciesImg.image = UIImage(named: "listWhite")
+        self.vacanciesText.textColor = UIColor.white
+        self.configView.isHidden = false
+        self.configImg.image = UIImage(named: "configPurple")
+        self.configText.textColor = #colorLiteral(red: 0.2823529412, green: 0.2431372549, blue: 0.9098039216, alpha: 1)
+        self.profileView.isHidden = true
+        self.profileImg.image = UIImage(named: "profileWhite")
+        self.profileText.textColor = UIColor.white
+    }
     
     @IBAction func filterAlpha(_ sender: UIButton) {
         alphaFilterActive = true
@@ -201,6 +247,36 @@ class JobsViewController: UIViewController {
         
         alphaFilter.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         alphaFilter.setTitleColor(#colorLiteral(red: 0.7139809728, green: 0.7036961317, blue: 0.9632331729, alpha: 1), for: .normal)
+    }
+    
+    func setMenuInitialState() {
+        profileView.layer.cornerRadius = 10
+        profileView.layer.shadowColor = #colorLiteral(red: 0.6722554564, green: 0.6682614088, blue: 0.675327003, alpha: 1)
+        profileView.layer.shadowOpacity = 0.6
+        profileView.layer.shadowOffset = CGSize(width: 0, height: -1)
+        profileView.layer.shadowRadius = 1
+        
+        vacanciesView.layer.cornerRadius = 10
+        vacanciesView.layer.shadowColor = #colorLiteral(red: 0.6722554564, green: 0.6682614088, blue: 0.675327003, alpha: 1)
+        vacanciesView.layer.shadowOpacity = 0.6
+        vacanciesView.layer.shadowOffset = CGSize(width: 0, height: -1)
+        vacanciesView.layer.shadowRadius = 1
+        
+        configView.layer.cornerRadius = 10
+        configView.layer.shadowColor = #colorLiteral(red: 0.6722554564, green: 0.6682614088, blue: 0.675327003, alpha: 1)
+        configView.layer.shadowOpacity = 0.6
+        configView.layer.shadowOffset = CGSize(width: 0, height: -1)
+        configView.layer.shadowRadius = 1
+        
+        self.vacanciesView.isHidden = false
+        self.vacanciesImg.image = UIImage(named: "listPurple")
+        self.vacanciesText.textColor = #colorLiteral(red: 0.2823529412, green: 0.2431372549, blue: 0.9098039216, alpha: 1)
+        self.configView.isHidden = true
+        self.configImg.image = UIImage(named: "configWhite")
+        self.configText.textColor = UIColor.white
+        self.profileView.isHidden = true
+        self.profileImg.image = UIImage(named: "profileWhite")
+        self.profileText.textColor = UIColor.white
     }
     
     func shareInformation(title: String, desc: String) {

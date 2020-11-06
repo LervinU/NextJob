@@ -32,18 +32,21 @@ class LoginViewController: UIViewController {
     @IBAction func Login(_ sender: UIButton) {
         if validations() {
             let loginManager = LoginManager()
-            loginManager.login(username: usernameField.text!, password: passwordField.text!)
-            sleep(1)
-            if let token = loginManager.getAcessToken() {
-            if token.count > 1 {
-                performSegue(withIdentifier: "goToMain", sender: self)
-            }
-            else {
-                let alert = UIAlertController(title: "Error", message: "Usuario y/o Contraseña incorrectos", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                self.present(alert, animated: true)
+            loginManager.login(username: usernameField.text!, password: passwordField.text!) { token in
+                if let safeToken = token {
+                if safeToken.count > 1 {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "goToMain", sender: self)
+                    }
+                }
+                else {
+                    let alert = UIAlertController(title: "Error", message: "Usuario y/o Contraseña incorrectos", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }
             }
         }
+            //sleep(1)
     }
 }
     

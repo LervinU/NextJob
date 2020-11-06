@@ -11,7 +11,7 @@ class LoginManager {
     
     var accessToken: String?
     
-    func login(username: String, password: String) {
+    func login(username: String, password: String, completion: @escaping (String?) -> Void) {
         let Url = String(format: "http://newnexusvacantsapp-env.eba-ismjscyn.us-east-2.elasticbeanstalk.com/auth/signin")
             guard let serviceUrl = URL(string: Url) else { return }
             let parameters: [String: Any] = [
@@ -36,7 +36,7 @@ class LoginManager {
             session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
                     self.parseJSON(loginData: data)
-                    
+                    completion(self.accessToken)
 //                    do {
 //                        let json = try JSONSerialization.jsonObject(with: data, options: [])
 //                        parseJSON(loginData: json)
