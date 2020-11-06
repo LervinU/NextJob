@@ -1,0 +1,6 @@
+framework module Pods_NextJob {
+  umbrella header "Pods-NextJob-umbrella.h"
+
+  export *
+  module * { export * }
+}
