@@ -32,6 +32,8 @@ class GenderViewController: UIViewController {
         
         let defaults = UserDefaults.standard
         defaults.setValue(gender, forKey: "gender")
+//        let registerVC = RegisterController()
+//        registerVC.genderField?.setTitle(gender, for: .normal)
         dismiss(animated: true, completion: nil)
         //performSegue(withIdentifier: "goToRegister", sender: nil)
     }
